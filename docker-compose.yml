@@ -19,7 +19,7 @@ services:
         ports:
             - 8000:80
         volumes:
-            - ./server/php/src:/var/www/html/ # соединяем папку с клиентской частью с папкой виртуальной машины
+            - ./server/:/var/www/html/ # соединяем папку с клиентской частью с папкой виртуальной машины
         depends_on:
             - db
 
@@ -32,3 +32,26 @@ services:
             - 8080:80
         depends_on:
             - db
+    drawer:
+        container_name: Drawer
+        image: php:7.2-apache
+        ports:
+            - 1111:80
+        volumes:
+            - ./drawer:/var/www/html
+
+    sort:
+        container_name: sort
+        image: php:7.2-apache
+        ports:
+            - 2222:80
+        volumes:
+            - ./sort:/var/www/html
+
+    console:
+        container_name: console
+        image: php:7.2-apache
+        ports:
+            - 3333:80
+        volumes:
+            - ./console:/var/www/html
