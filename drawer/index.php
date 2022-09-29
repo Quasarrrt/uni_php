@@ -1,3 +1,4 @@
+
 <html lang="ru">
 <head>
     <title>Hello world page</title>
@@ -10,7 +11,7 @@
 
 
 $param = null;
-
+/*9777777*/
 if(!empty($_POST['param']))
 {
     $param = $_POST['param'];

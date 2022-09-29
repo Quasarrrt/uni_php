@@ -6,7 +6,7 @@
 <body>
 <?php
 
-//localhost:2222/?array=23,4,5,78,9,3
+//http://localhost:2222/?array=23,4,78,9,3
 // Функция сортировки выбором
 function selectSort(array $arr) {
     $count= count($arr);
